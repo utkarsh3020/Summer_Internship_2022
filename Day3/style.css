@@ -1,0 +1,213 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body{
+    font-family: 'Dancing Script', cursive;
+}
+
+section{
+    padding: 10rem 0 2rem;
+}
+
+section:last-child{
+    margin-bottom: 0;
+}
+
+h2{
+    background: #555;
+    border-radius: 3px;
+    color: #ddd;
+    padding: 5px;
+    margin: 1rem 0;
+}
+
+h3{
+    font-weight: bold;
+    color: orangered;
+    margin: 30px 0 10px 0;
+}
+
+li{
+    line-height: 1.8;
+    font-size: 17px;
+}
+
+/*=========== Header ========== */
+header{
+    background: #C6C6C8;
+    padding: 1.5rem;
+    text-align: center;
+    z-index: 1000;
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+  
+.sticky + .container {
+    padding-top: 102px;
+}
+
+header h1{
+    font-family: 'Dancing Script', cursive;
+    font-size: 5rem;
+}
+
+header span{
+    color: rgb(81, 81, 218);
+    font-family: 'Dancing Script', cursive;
+}
+
+.container{
+    display: flex;
+    padding: 2rem;
+    background: #717787;
+}
+
+p{
+    line-height: 1.8;
+    font-size: 20px;
+}
+
+.heading{
+    text-align: center;
+    color: rgb(81, 81, 218);
+    margin-bottom: 2rem;
+    font-style: italic;
+    text-transform: uppercase;
+    font-size: 2rem;
+}
+
+/* --------------- Side Bar ------------------- */
+.container-left{
+    margin-right: 2.5rem;
+    position: fixed;
+    top: 190px;
+}
+
+.container-left h1{
+    margin-bottom: 20px;
+    font-family: monospace;
+}
+
+.container-left ul li{
+    list-style: none;
+    padding: 4px;
+}
+.container-left ul li a{
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.container-left ul li a:hover{
+    border-bottom: 2px solid #333;
+    color: #111;
+}
+
+
+/* -------------- Documentation Content ------------------ */
+.container-right{
+    margin-left: 20rem;
+    padding: 3rem;
+    padding-top: 0;
+    background: #fff;
+    border: 1px solid #fff;
+    border-radius: 5px;
+}
+
+#intro p{
+    margin-bottom: 20px;
+}
+
+.container-right img{
+    margin-left: 20rem;
+}
+
+#box-model li{
+    padding: 5px;
+}
+
+#About img{
+    width: 400px;
+}
+
+.comd{
+    font-size: 25px;
+    padding-top: 2.4rem;
+}
+
+.git-cmd{
+    background: #ddd;
+    padding: 0.7rem;
+    border-radius: 3px;
+    margin-top: 12px;
+}
+
+/* -------------- Footer ------------------ */
+.footer{
+    text-align: center;
+    color: #fff;
+    background: #111;
+    padding: 1.5rem 0;
+}
+
+.footer span{
+    color: rgb(81, 81, 218);
+}
+
+
+/* ------------------ Media Queries -------------------- */
+@media(max-width: 1024px){
+
+    header h1{
+        font-size: 3rem;
+    }
+
+    .container-right img{
+        margin-left: 0;
+        width: 250px;
+    }
+
+    .border{
+        margin-left: 18rem;
+    }
+}
+
+@media(max-width: 650px){
+    
+
+    .container{
+        flex-direction: column;
+    }
+
+    .container-left{
+        margin-bottom: 2.5rem;
+        position: relative;
+        top: 0;
+    }
+
+    .container-right{
+        margin-left: 0;
+    }
+
+    .border{
+        border: none;
+    }
+
+    img{
+        width: 250px;
+    }
+
+    #About img{
+        width: 250px;
+    }
+    
+}
