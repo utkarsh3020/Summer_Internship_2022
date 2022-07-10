@@ -1,3 +1,3 @@
-##Landing Page UI
+# Landing Page UI
 
 ### Week 1 Final Assignment
