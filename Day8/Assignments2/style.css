@@ -1,0 +1,52 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: cursive;
+}
+
+body{
+  background: linear-gradient(to right, #f5f7fa, #b8c6db);
+}
+
+h1{
+  text-align: center;
+  margin: 3rem 0;
+}
+
+section{
+  display: flex;
+  justify-content: center;
+}
+
+#image-container {
+  width: 90vw;
+  display: grid;
+  place-items: center;
+  grid-template-areas:
+    "p1 . ."
+    ". p2 ."
+    ". . p3";
+}
+
+img{
+  width: 200px;
+}
+
+#img1 {
+  grid-area: p1;
+}
+
+#img2 {
+  grid-area: p2;
+}
+
+#img3 {
+  grid-area: p3;
+}
+
+@media(max-width: 750px){
+  #image-container {
+    display: block;
+  }
+}
