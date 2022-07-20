@@ -1,0 +1,369 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: monospace;
+  background: var(--primary-dark-color);
+  text-decoration: none;
+  color: var(--primary-text-color);
+}
+
+span, a{
+  font-size: 1.2rem;
+}
+
+body::-webkit-scrollbar {
+  width: 1em;
+  color: var(--primary-lighter-color);
+}
+
+body::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: var(--primary-lighter-color);
+  outline: 1px solid slategrey;
+}
+
+:root{
+  --primary-dark-color: #495C83;
+  --primary-light-color: #7A86B6;
+  --primary-lighter-color: #A8A4CE;
+  --primary-text-color: #C8B6E2;
+  --dark-color: #111;
+  --white-color: #fff;
+  --issue-comment-color: #02bd60;
+  --request-msg-color: #02bdb3;
+  --light-border: 0.1px solid #ddd;
+}
+
+a{
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+.App {
+  text-align: center;
+  color: var(--primary-text-color);
+}
+
+.logo{
+  position: fixed;
+  width: 100%;
+  text-align: center;
+  font-size: 2rem;
+  padding: 2rem;
+  z-index: 1000;
+  box-shadow: inset 0  0 6px rgba(0, 0, 0, 0.2);
+}
+
+.content-body{
+  position: relative;
+  top: 100px;
+}
+
+/* Form */
+form{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  align-items: baseline;
+  margin-bottom: 2rem;
+}
+
+input[type=text] {
+  padding: 12px 20px;
+  margin: 8px 20px;
+  box-sizing: border-box;
+  border: none;
+  border-bottom: 2px solid;
+  border-color: var(--primary-lighter-color);
+  color: var(--primary-text-color);
+  transition: 0.4s;
+  font-size: medium;
+  text-align: center;
+  outline: none;
+}
+
+input[type=text]:hover{
+  outline: none;
+}
+
+input[type=text]:focus, input[type=text]:active {
+  border-bottom: 2px solid;
+  border-color: var(--primary-lighter-color);
+}
+
+input[type=text]:focus::placeholder {
+  color: transparent;
+}
+
+.search-button{
+  border: none;
+  border-radius: 3px;
+  padding: 10px;
+  background: var(--primary-light-color);
+  font-size: 1.5em;
+  font-weight: bold;
+  color: var(--primary-text-color);
+  cursor: pointer;
+}
+
+/* Heading */
+.main-heading{
+  font-size: 1.2em;
+}
+
+.username-link{
+  margin-left: 7px;
+}
+
+/* Content Section */
+.avatar{
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin: 0px 10px;
+  border: var(--light-border);
+}
+
+.activity-section{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 4rem;
+  padding: 0 3rem;
+  padding-right: 0;
+}
+
+.activity-section-left, .activity-section-right{
+  width: 40%;
+}
+
+.activity-section-left{
+  position: fixed;
+}
+
+#border{
+  border: var(--light-border);
+  padding: 2rem;
+  border-radius: 5px;
+}
+
+.activity-section-right{
+  position: relative;
+  margin-left: 50%;
+}
+
+.grid {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 20px;
+}
+
+.grid-item{
+  background: var(--primary-dark-color);
+  color: var(--primary-text-color);
+  padding: 10px;
+  border-radius: 3px;
+  border: var(--light-border);
+  margin:0px 5px;
+}
+
+.other-details{
+  text-align: justify;
+  font-size: 1rem;
+  padding: 0 3rem;
+}
+
+.other-details span{
+  color: var(--white-color);
+}
+
+.activity-item-create-event{
+  margin: 10px 20px;
+  background: #7F4F24;
+  padding: 10px;
+}
+
+.activity-item-delete-event{
+  margin: 10px 20px;
+  background: #FF1700;
+  padding: 10px;
+}
+
+.activity-item-pull-request-event{
+  margin: 10px 20px;
+  background: #139487;
+  padding: 10px;
+}
+
+.activity-item-watch-event{
+  margin: 10px 20px;
+  background: #FF6768;
+  color: var(--white-color);
+  padding: 10px;
+}
+
+.activity-item-fork-event{
+  margin: 10px 20px;
+  background: #2D4263;
+  padding: 10px;
+}
+
+.activity-item-issues-event{
+  margin: 10px 20px;
+  background: #C84B31;
+  padding: 10px;
+}
+
+.activity-item-issue-comment-event{
+  margin: 10px 20px;
+  background: var(--primary-lighter-color);
+  padding: 10px;
+}
+
+.activity-item-pull-request-review-event{
+  margin: 10px 20px;
+  background: var(--primary-lighter-color);
+  padding: 10px;
+}
+
+.activity-item-public-event{
+  margin: 10px 20px;
+  background: var(--primary-lighter-color);
+  padding: 10px;
+}
+
+.activity-item-default{
+  margin: 10px 20px;
+  background: var(--primary-lighter-color);
+  padding: 10px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.205);
+}
+
+
+.item-type{
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.item-repo-link{
+  font-size: small;
+  text-decoration: none;
+  color: var(--primary-text-color);
+  text-decoration: underline;
+}
+
+.activity-item{
+  width: 100%;
+}
+
+/* Commits */
+
+.item-commit-item{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.item-commit-item-message{
+  width: fit-content;
+  background-color : var(--primary-lighter-color);
+  color: var(--dark-color);
+  padding: 5px 10px;
+  margin: 5px;
+  border-radius: 3px;
+}
+
+.item-commit-item-message a{
+  color: var(--dark-color);
+  background: var(--primary-lighter-color);
+  font-size: medium;
+}
+
+
+.item-commit-item-author{
+  font-size: small;
+}
+
+/* Pull Request */
+
+.item-pull-request{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.item-pull-request-message{
+  width: fit-content;
+  background-color : var(--request-msg-color);
+  border: none;
+  color: var(--dark-color);
+  padding: 5px 10px;
+  margin: 5px;
+  border-radius: 3px;
+}
+
+.item-pull-request-message a{
+  color: var(--dark-color);
+  font-size: medium;
+  background: var(--request-msg-color);
+}
+
+
+/** issue comment */
+
+.item-issue-comment{
+  width: fit-content;
+  background : var(--issue-comment-color);
+  border: none;
+  color: var(--white-color);
+  padding: 5px 10px;
+  margin: 5px;
+  border-radius: 3px; 
+}
+
+.item-issue-comment a{
+  background: var(--issue-comment-color);
+  color: var(--dark-color);
+  font-size: medium;
+}
+
+/* Media Queries */
+
+@media(max-width: 950px){
+  .activity-section{
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 3rem;
+  }
+  .activity-section-left, .activity-section-right{
+    width: 100%;
+  }
+  
+  .activity-section-left{
+    position: relative;
+    margin-bottom: 2rem;
+  }
+
+  .activity-section-right{
+    margin-left: 0;
+    padding: 0;
+  }
+  
+}
+
+@media(max-width: 450px){
+  .activity-section{
+    padding: 10px;
+  }
+
+  .grid {
+    flex-direction: column;
+  }
+  .grid-item{
+    margin: 10px 0;
+  }
+}
